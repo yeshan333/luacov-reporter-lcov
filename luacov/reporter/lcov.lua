@@ -23,6 +23,10 @@ end
 local LcovReporter = setmetatable({}, reporter.ReporterBase)
 LcovReporter.__index = LcovReporter
 
+function LcovReporter:on_file_error(filename, error_type, message) -- luacheck: no unused args
+	error(("Could not %s %s: %s"):format(error_type, filename, message), 0)
+end
+
 function LcovReporter:on_new_file(filename)
 	self:write("SF:", filename, "\n")
 end

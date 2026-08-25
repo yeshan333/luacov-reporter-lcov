@@ -1,3 +1,8 @@
+Next
+
+  - Fail report generation when a source file cannot be processed
+
+
 0.2 - 2019-11-01
 
   - Fix failure when md5 library is not available (#1)
